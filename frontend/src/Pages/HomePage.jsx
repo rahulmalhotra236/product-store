@@ -5,7 +5,8 @@ import toast from 'react-hot-toast'
 
 
 const HomePage = () => {
-  const {fetchProducts,products} = useProductStore()
+  const { fetchProducts, products } = useProductStore()
+
 
   useEffect(() => {
     fetchProducts()
@@ -24,6 +25,9 @@ const HomePage = () => {
         <div>
         <h1>No Products Found</h1>
         </div>}
+      
+     
+      
     </div>
   );
 };
