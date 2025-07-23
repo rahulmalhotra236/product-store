@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useProductStore } from '../store/product';
+import toast from 'react-hot-toast';
 
 
 const CreatePage = () => {
@@ -16,11 +17,16 @@ const CreatePage = () => {
     console.log(newProduct)
     const { success, message } = await createProducts(newProduct)
     if (!success) {
-      console.log("failed",message)
+      console.log("failed", message)
+      toast.error(message)
     }
     else {
+       toast.success(message)
       console.log("success",message)
     }
+   
+
+    setNewProduct({name:"",price:"",image:""})
   }
   return (
     <div className='px-20 flex flex-col gap-10 justify-center items-center h-100

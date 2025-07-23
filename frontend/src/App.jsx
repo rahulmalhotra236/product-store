@@ -4,10 +4,12 @@ import CreatePage from "./Pages/CreatePage"
 import NavBar from "./components/NavBar"
 
 
+
 function App() {
 
   return (
     <div className="bg-gray-900 w-full h-screen text-white text-3xl">
+     
       <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
